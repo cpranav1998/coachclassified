@@ -10,6 +10,7 @@
     "@types/node": "^12.12.54",
     "@types/react": "^16.9.48",
     "@types/react-dom": "^16.9.8",
+    "axios": "^0.20.0",
     "mobx": "^5.15.6",
     "mobx-react": "^6.3.0",
     "mobx-state-tree": "^3.17.2",
@@ -24,6 +25,7 @@
     "start-api": "cd api && venv/bin/flask run --no-debugger",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache",
     "eject": "react-scripts eject",
     "style": "standard src/**/*.ts src/**/*.tsx",
     "fix": "standard --fix src/**/*.ts src/**/*.tsx"
