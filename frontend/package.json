@@ -4,18 +4,37 @@
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "@types/jest": "^24.9.1",
+    "@types/node": "^12.12.54",
+    "@types/react": "^16.9.48",
+    "@types/react-dom": "^16.9.8",
+    "axios": "^0.20.0",
+    "mobx": "^5.15.6",
+    "mobx-react": "^6.3.0",
+    "mobx-state-tree": "^3.17.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.3",
+    "standard": "^14.3.4",
+    "typescript": "^3.7.5"
   },
   "scripts": {
     "start": "react-scripts start",
+    "start-api": "cd api && venv/bin/flask run --no-debugger",
     "build": "react-scripts build",
-    "start-api": "cd ../api && venv/bin/flask run --no-debugger",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache",
+    "eject": "react-scripts eject",
+    "style": "standard src/**/*.ts src/**/*.tsx",
+    "fix": "standard --fix src/**/*.ts src/**/*.tsx"
+  },
+  "standard": {
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint/eslint-plugin"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -31,6 +50,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "proxy": "http://localhost:5000"
+  }
 }
